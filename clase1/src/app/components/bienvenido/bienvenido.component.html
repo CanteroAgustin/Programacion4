@@ -1,0 +1,26 @@
+<form [formGroup]="profileForm">
+    <div>
+        <mat-form-field appearance="fill">
+            <mat-label>EdadUno</mat-label>
+            <input matInput formControlName="edadUnoInput">
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+            <mat-label>EdadDos</mat-label>
+            <input matInput formControlName="edadDosInput">
+        </mat-form-field>
+    </div>
+    <div>
+        <button mat-raised-button color="primary" (click)="calcularClickHandler()">Calcular</button>
+        <button mat-raised-button (click)="limpiarClickHandler()">Limpiar</button>
+    </div>
+    <div>
+        <mat-form-field appearance="fill">
+            <mat-label>Suma</mat-label>
+            <input matInput readonly formControlName="sumaInput">
+        </mat-form-field>
+        <mat-form-field appearance="fill">
+            <mat-label>Promedio</mat-label>
+            <input matInput readonly formControlName="promedioInput">
+        </mat-form-field>
+    </div>
+</form>
